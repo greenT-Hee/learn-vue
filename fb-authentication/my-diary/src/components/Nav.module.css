@@ -1,0 +1,19 @@
+.nav {
+    background-color: lightcoral;
+    padding: 20px 50px;
+}
+
+.nav .list_nav {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.nav .title {
+    color: #fff;
+}
+
+.nav .list_nav li a{
+    color: #fff;
+    text-decoration: none;
+}
