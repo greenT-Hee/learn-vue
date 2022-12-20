@@ -1,10 +1,12 @@
 import styles from './Signup.module.css';
 import { useState } from 'react';
+import { useSignup } from '../../hooks/useSignup';
 
 export default function Signup () {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [displayName, setDisplayname] = useState(""); //fb랑 약속된 이름임
+    const { error, isPending, signup} = useSignup();
 
     const handleData = (e) => {
         if(e.target.type === 'email') {
@@ -16,13 +18,14 @@ export default function Signup () {
         }
     }
 
-    const hnadleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, password);
+        signup(email, password, displayName)
     }
 
     return (
-        <form className={styles.singup_form} onSubmit={hnadleSubmit}>
+        <form className={styles.singup_form} onSubmit={handleSubmit}>
             <fieldset>
                 <legend>회원가입</legend>
                 <label htmlFor="myEmail">Email</label>
