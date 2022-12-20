@@ -15,13 +15,14 @@ export default function Signup () {
             setPassword(e.target.value);
         } else if (e.target.type === 'text' ) {
             setDisplayname(e.target.value)
+            console.log(displayName)
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, password);
-        signup(email, password, displayName)
+        signup(email, password, displayName);
     }
 
     return (
