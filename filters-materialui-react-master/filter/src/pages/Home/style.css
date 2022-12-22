@@ -1,0 +1,20 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+}
+
+.home_panelList-wrap {
+    display: flex;
+    flex: 1;
+}
+
+.home_panel-wrap {
+    /* background-color: red; */
+    flex-basis: 280px;
+}
+
+.home_list-wrap {
+    /* background-color: blue; */
+    flex: 1;
+}
