@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>헤더</h1>
+  
+  <!-- shadowRoot -->
+  <custom-header></custom-header>
+  <template id="header">
+    <header>
+      <h1>헤더 컴포넌트입니다</h1>
+    </header>
+    <style>
+      h1 {
+        color : red;
+      }
+      </style>
+  </template>
+
+  <script>
+    class Header extends HTMLElement {
+      connectedCallback () {
+        this.attachShadow({mode : "open"});
+        this.shadowRoot.append(header.content.cloneNode(true));
+      }
+    }
+
+    customElements.define("custom-header", Header);
+    
+  </script>
+</body>
+</html>

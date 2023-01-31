@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/importComponents.js" type="module"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="footer"></div>
+  <!-- <div id="footer"></div> -->
+
+  <script type="module">
+    import {importPage} from './js/importComponents.js';
+
+    importPage('header', './components/header');
+    importPage('footer', './components/footer');
+  </script>
+
+</body>
+</html>
