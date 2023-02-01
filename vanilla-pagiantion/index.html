@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./src/style.css">
   <title>Board</title>
 </head>
 <body>
@@ -29,22 +29,15 @@
       <div class="tbl-content">
         <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
-            <!-- <tr>
-              <td>AUSTRALIAN COMPANY </td>
-              <td>$1.38</td>
-              <td>+2.01</td>
-              <td>-0.36%</td>
-            </tr> -->
+            <!-- listHTML (index.js) -->
           </tbody>
         </table>
       </div>
       <nav aria-label="Page navigation example" style="margin: 20px auto;">
-        <ul class="pagination" style="justify-content: center;">
-          <li class="page-item"><a class="page-link" href="#">First</a></li>
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <ul id="navUl" class="pagination" style="justify-content: center;">
+          <!-- <li class="page-item"><a class="page-link" href="#">First</a></li>
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+          <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
           <li class="page-item"><a class="page-link" href="#">Next</a></li>
           <li class="page-item"><a class="page-link" href="#">Last</a></li>
         </ul>
@@ -53,6 +46,6 @@
     <!-- pagination -->
   </div>  <!--container 끝-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="./index.js"></script>
+  <script src="./src/index.js"></script>
 </body>
 </html>
