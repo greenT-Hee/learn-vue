@@ -84,9 +84,7 @@ const createPagingHTML = (currentPage) => {
       if(pagingId == "last") selectedPage = totalPage;
       
       createListHTML(selectedPage);
-      createPagingHTML(selectedPage);
-      
-      console.log(selectedPage)
+      createPagingHTML(selectedPage);      
     })
   }
 }
