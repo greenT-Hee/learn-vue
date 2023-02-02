@@ -4,10 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/style/reset.css">
+  <link rel="stylesheet" href="./assets/style/style.css">
   <title>reCaptcha v3 demo</title>
 </head>
 <body>
-  
+  <section>
+    <h1 class="title">LULU 멤버십 가입 신청서</h1>
+    <form action="post">
+      <div class="inputAlign">
+        <label for="korean">고객명(국문)</label>
+        <input type="text" id="korean">
+      </div>
+      <div class="inputAlign">
+        <label for="english">고객명(영문)</label>
+        <input type="text" id="english">
+      </div>
+      <div class="inputAlign">
+        <label for="birth">생년월일</label>
+        <input type="text" id="birth">
+      </div>
+      <div class="inputAlign">
+        <label for="email">이메일</label>
+        <input type="text" id="email">
+      </div>
+      <div class="inputAlign">
+        <label for="contact">연락처</label>
+        <input type="text" id="contact">
+      </div>
+      <div class="inputAlign">
+        <label for="nation">체류 국가</label>
+        <input type="text" id="nation">
+      </div>
+      <div class="inputAlign">
+        <label for="launchDate">출국(예정)일</label>
+        <input type="date" id="launchDate">
+      </div>
+
+      <div class="wrapBtn">
+        <button class="submitBtn">가입 신청서 제출하기</button>
+      </div>
+    </form>
+    
+    <img class="logo" src="./assets/img/lulu-logo.png" alt="">
+  </section>
 </body>
 </html>
