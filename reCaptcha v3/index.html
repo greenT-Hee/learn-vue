@@ -22,15 +22,19 @@
       </div>
       <div class="inputAlign">
         <label for="birth">생년월일</label>
-        <input type="text" id="birth">
+        <input type="date" id="birth">
       </div>
       <div class="inputAlign">
         <label for="email">이메일</label>
-        <input type="text" id="email">
+        <div class="wrapInput valEmail">
+          <input type="text" id="email">
+        </div>
       </div>
       <div class="inputAlign">
         <label for="contact">연락처</label>
-        <input type="text" id="contact">
+        <div class="wrapInput valContact">
+          <input type="text" id="contact">
+        </div>
       </div>
       <div class="inputAlign">
         <label for="nation">체류 국가</label>
@@ -41,12 +45,12 @@
         <input type="date" id="launchDate">
       </div>
 
-      <div class="wrapBtn">
-        <button class="submitBtn">가입 신청서 제출하기</button>
-      </div>
+      <button class="submitBtn">가입 신청서 제출하기</button>
     </form>
     
-    <img class="logo" src="./assets/img/lulu-logo.png" alt="">
+    <img class="logo" src="./assets/img/lulu-logo.png" alt="룰루로고">
   </section>
+
+  <script src="./assets/js/util.js"></script>
 </body>
 </html>
