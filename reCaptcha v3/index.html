@@ -11,7 +11,8 @@
 <body>
   <section>
     <h1 class="title">LULU 멤버십 가입 신청서</h1>
-    <form action="post">
+    <form action="post" id="demo-form">
+      <input type="hidden" name="hidden-input" id="hidden-input">
       <div class="inputAlign">
         <label for="korean">고객명(국문)</label>
         <input type="text" id="korean">
@@ -46,11 +47,73 @@
       </div>
 
       <button class="submitBtn">가입 신청서 제출하기</button>
+      <!-- <button class="g-recaptcha" 
+        data-sitekey="6LeGTEYkAAAAAM2SkehKs4YSne_MdcH2lK7xCik0" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit
+      </button> -->
     </form>
     
     <img class="logo" src="./assets/img/lulu-logo.png" alt="룰루로고">
   </section>
 
   <script src="./assets/js/util.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeGTEYkAAAAAM2SkehKs4YSne_MdcH2lK7xCik0"></script>
+  <script>
+      grecaptcha.ready(function() {
+        const demoForm = document.querySelector('#demo-form');
+        const hiddenInput = document.createElement('input');
+        demoForm.appendChild(hiddenInput);
+        hiddenInput.setAttribute('type', 'hidden');
+
+        submitBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          grecaptcha.execute('6LeGTEYkAAAAAM2SkehKs4YSne_MdcH2lK7xCik0', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+          console.log(token)
+          hiddenInput.setAttribute('value', token);
+          if (hiddenInput.value != '') productData(hiddenInput.input);
+
+        })
+          
+        });
+        })
+
+        // grecaptcha.ready(function() {
+        //   submitBtn.addEventListener('click', e => {
+        //       grecaptcha.execute('6LeGTEYkAAAAAM2SkehKs4YSne_MdcH2lK7xCik0', {action: 'submit'}).then(function(token) {
+        //           console.log("✅ fetch data :",'fetch(\'/recaptcha-v3-verify.php?action=examples/v3scores&token=\'' + token);
+  
+        //           fetch('/recaptcha-v3-verify.php?action=examples/v3scores&token='+token).then(function(response) {
+        //               response.json().then(function(data) {
+        //                   console.log(JSON.stringify(data, null, 2));
+        //               });
+        //           });
+        //       });
+        //   });
+        // });
+
+    
+    
+  async function productData(token) {
+  try {
+    const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      body: JSON.stringify({
+       "secret": '6LeGTEYkAAAAAKs16gxEj7-Fufs4HTFYy3_71EBQ',
+       "response": token,
+      }),
+    headers : {
+      "Content-Type" : "application/x-www-form-urlencoded; charset=utf-8"
+    }
+
+    });
+    const resJson = await res.json();
+    console.log(resJson);
+  } catch (err) {
+    console.error(err);
+  }
+}
+  </script> 
 </body>
 </html>
