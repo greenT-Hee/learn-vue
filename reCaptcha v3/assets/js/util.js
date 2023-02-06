@@ -7,47 +7,56 @@ const emailInput = document.querySelector('#email');
 const contactInput = document.querySelector('#contact');
 const nationInput = document.querySelector('#nation');
 const launchDateInput = document.querySelector('#launchDate');
+const valEmail = document.querySelector('.valEmail');
+const valContact = document.querySelector('.valContact');
+const emailPattern = /[\w\d]+@[\w\d]+.[a-zA-z]+[.]+[a-zA-z]+/g;
+const contactPattern = /[\d]{3}[\d]{4}[\d]{4}/gm;
 
-const emailPattern = /[\w\d]+@[\w\d]+.[a-zA-z]+[.]+[a-zA-z]+/gm;
-const contactPattern = /[\d]{3}[-][\d]{4}[-][\d]{4}/gm;
-
-const createErrorMsg = (appendTag, newSpan, msg) => {
-  newSpan.classList.add('errorMsg');  
-  appendTag.appendChild(newSpan);
-  newSpan.textContent = msg;
+const createErrorMsg = (appendTag, errorSpan, msg) => {
+  errorSpan.classList.add('errorMsg');  
+  appendTag.appendChild(errorSpan);
+  errorSpan.textContent = msg;
 }
 
-const checkValidation = () => {
-  const valEmail = document.querySelector('.wrapInput.valEmail');
-  const valContact = document.querySelector('.wrapInput.valContact');
 
-  if((!emailPattern.test(emailInput.value) && emailInput != '') && valEmail.childElementCount == 1 ) {
-    const errorSpan = document.createElement('span');
-    createErrorMsg(valEmail, errorSpan, "올바른 이메일 형식이 아닙니다.");
-  } else if((emailPattern.test(emailInput.value)|| emailInput.value == '') && valEmail.childElementCount == 2) {
-    valEmail.lastElementChild.remove();
+const  checkEmailValidation = () => {
+  if (!emailPattern.test(emailInput.value) && valEmail.childElementCount == 1 && !emailInput.value == '') {
+    const errorSpan = document.createElement('span'); 
+    createErrorMsg(valEmail, errorSpan, "올바른 이메일 형식이 아닙니다.")
+  } else {
+    if(valEmail.childElementCount == 2) {
+      emailInput.nextElementSibling.remove();
+    }
   }
-  
-  console.log("emailvalid 자식 수: ", valEmail.childElementCount)
-  console.log("이메일 유효성 검사: ", emailPattern.test(emailInput.value))
-  console.log("emailInput.value: ", emailInput.value)
-  
-  // if (!contactPattern.test(contactInput.value) && contactInput.value != '' && valContact.childElementCount == 1) {
-  //   const errorSpan = document.createElement('span');
-  //   createErrorMsg(valContact, errorSpan, "휴대폰 형식을 맞춰주세요"); 
-  // }  
-  
+
 }
 
-const setValueInput = () => {
+const checkContactValidation = () => {
+  if(contactInput.value != '') contactInput.value = contactInput.value.replace(/[-.*_,+" "$%^&!@()~]/g,"");
+
+  if (!contactPattern.test(contactInput.value) && valContact.childElementCount == 1 && !contactInput.value == '') {
+    const errorSpan = document.createElement('span'); 
+    createErrorMsg(valContact, errorSpan, "올바른 연락처 형식이 아닙니다.");
+  } else {
+    if(valContact.childElementCount == 2) {
+      contactInput.nextElementSibling.remove();
+    }
+  }
+}
+
+
+const setValue = () => {
   for(let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener('blur', (e) => {
+    inputs[i].addEventListener('change', (e) => {
       inputs[i].value = e.target.value;
-      checkValidation();
+      console.log(inputs[i], ":", inputs[i].value);
+
+      if (inputs[i].id === 'email') checkEmailValidation();
+      if (inputs[i].id === 'contact') checkContactValidation();
     })
   }
 }
-setValueInput();
+setValue()
 
 // 버튼 클릭했을 때
 const submitBtn = document.querySelector(".submitBtn");
