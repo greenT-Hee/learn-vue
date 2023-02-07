@@ -1,53 +1,53 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const request = require('request');
-const secretKey = '<SECRETKEY>';
+const express = require("express");
+const bodyParser = require("body-parser");
+const request = require("request");
+const secretKey = "6LeGTEYkAAAAAKs16gxEj7-Fufs4HTFYy3_71EBQ";
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 
-app.get('/',(req,res) =>{
-    res.sendFile(__dirname + '/index.html');
-    console.log('at home page');
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+  console.log("at home page");
 });
 
+app.post("/subscribe", (req, res) => {
+  if (!req.body.captcha) {
+    console.log("err");
+    return res.json({ success: false, msg: "Capctha is not checked" });
+  }
 
+  const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}`;
 
-app.post('/subscribe',(req,res)=>{
-
-    if(!req.body.captcha){
-        console.log("err");
-        return res.json({"success":false, "msg":"Capctha is not checked"});
-       
+  request(verifyUrl, (err, response, body) => {
+    if (err) {
+      console.log(err);
     }
 
-    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}`;
+    body = JSON.parse(body);
 
-    request(verifyUrl,(err,response,body)=>{
+    if (!body.success && body.success === undefined) {
+      return res.json({ success: false, msg: "captcha verification failed" });
+    } else if (body.score < 0.5) {
+      return res.json({
+        success: false,
+        msg: "you might be a bot, sorry!",
+        score: body.score,
+      });
+    }
 
-        if(err){console.log(err); }
-
-        body = JSON.parse(body);
-
-        if(!body.success && body.success === undefined){
-            return res.json({"success":false, "msg":"captcha verification failed"});
-        }
-        else if(body.score < 0.5){
-            return res.json({"success":false, "msg":"you might be a bot, sorry!", "score": body.score});
-        }
-        
-            // return json message or continue with your function. Example: loading new page, ect
-            return res.json({"success":true, "msg":"captcha verification passed", "score": body.score});
-
-    })
-
+    // return json message or continue with your function. Example: loading new page, ect
+    return res.json({
+      success: true,
+      msg: "captcha verification passed",
+      score: body.score,
+    });
+  });
 });
 
-
-
-app.listen(3000,() =>{
-    console.log('server is now up!');
+app.listen(3000, () => {
+  console.log("server is now up!");
 });
