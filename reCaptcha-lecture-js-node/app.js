@@ -15,13 +15,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/subscribe", (req, res) => {
+  console.log(req,"req capcha!!!")
   if (!req.body.captcha) {
     console.log("err");
     return res.json({ success: false, msg: "Capctha is not checked" });
   }
 
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}`;
-
+  console.log(verifyUrl, 'url')
   request(verifyUrl, (err, response, body) => {
     if (err) {
       console.log(err);
