@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="target"></div>
+
+  <script>
+    const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
+
+const sanitizer = new Sanitizer();  // Default sanitizer;
+
+// Get the Element with id "target" and set it with the sanitized string.
+const target = document.getElementById("target");
+target.setHTML(unsanitized_string, { sanitizer });
+
+console.log(target.innerHTML);
+// "abc  def"
+  </script>
+</body>
+</html>

@@ -1,6 +1,8 @@
 let noticeData;
-const MAX_DATA = 10;
+let MAX_DATA = 10;
 const MAX_PAGE = 5;
+const sanitizer = new Sanitizer()
+
 
 const getDataList = async () => {
   try{
@@ -11,6 +13,7 @@ const getDataList = async () => {
     if(noticeData.length != 0) {
       createListHTML(1);
       createPaginHTML(1);
+      search();
     }
   } catch (err) {
     console.error(err)
@@ -25,7 +28,7 @@ const createListHTML = (selectedPage) => {
 
   for(let i = dataStart; i < dataStart + MAX_DATA; i++) {
     if (noticeData[i] == null) break;
-    listHTML += `<tr>`;
+    listHTML += `<tr id="list">`;
     listHTML += `<td>${noticeData[i].name}</td>`;
     listHTML += `<td>${noticeData[i].nation}</td>`;
     listHTML += `<td>${noticeData[i].position}</td>`;
@@ -33,7 +36,8 @@ const createListHTML = (selectedPage) => {
     listHTML += `</tr>`;
   }
 
-  tbody.innerHTML = listHTML;
+  // tbody.innerHTML = listHTML;
+  tbody.setHTML(listHTML, sanitizer);
 }
 
 const createPaginHTML = (currentPage) => {
@@ -60,11 +64,16 @@ const createPaginHTML = (currentPage) => {
   }
 
   if(lastPage < totalPage) {
-    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="next">next</a></li>`;
+    pagingHTML += `<li onClick="alert()" class="page-item"><a class="page-link" href="#" id="next">next</a></li>`;
     pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="last">last</a></li>`;
   }
 
-  navUl.innerHTML = pagingHTML;
+  const alert = () => {
+    alert('hello world')
+  }
+
+  // navUl.innerHTML = pagingHTML;
+  navUl.setHTML(pagingHTML, sanitizer)
 
   let pageLink = document.querySelectorAll('.page-link');
   for(let i = 0; i < pageLink.length; i++) {
@@ -82,6 +91,27 @@ const createPaginHTML = (currentPage) => {
       
       createListHTML(selectedPage);
       createPaginHTML(selectedPage);
+      search(selectedPage);
     })   
   }
 }
+
+
+const search = (selectedPage) => {
+  const list = document.querySelectorAll('#list');
+  const formControl = document.querySelector('.form-control');
+  let inputValue ="";
+
+  formControl.addEventListener('input', (e) => {
+    inputValue = e.target.value.toUpperCase();
+    
+    for(let i = 0; i < list.length; i++) {
+      if(list[i].innerText.toUpperCase().indexOf(inputValue) > -1) {
+        list[i].style.display='';
+      } else {
+        list[i].style.display = "none";
+      }  
+    }
+  })
+}
+
