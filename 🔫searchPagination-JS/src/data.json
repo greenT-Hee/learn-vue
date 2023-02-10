@@ -20,7 +20,7 @@
     {"name": "2.Victor Moses", "nation":"Nigeria","position":"RWB", "score": 18},
     {"name": "2.César Azpilicueta", "nation":"Spain","position":"DF", "score": 17},
     {"name": "2.Oscar", "nation":"Brazil","position":"MF", "score": 38},
-    {"name": "2.David Luiz", "nation":"Brazil","position":"CF", "score": 18},
+    {"name": "2.David Luiz", "nation":"Brazil","position":"CF", "score": 18}, 
 
     {"name": "3.Gary cahill", "nation":"England","position":"CB", "score": 25},
     {"name": "3.Eden Hazard", "nation":"Belguim","position":"W", "score": 110},
@@ -114,5 +114,6 @@
     {"name": "11.Harry Ford", "nation":"England","position":"DF", "score": 5},
     {"name": "11.Harold Halse", "nation":"England","position":"DF", "score": 5},
     {"name": "11.Tommy Logan", "nation":"England","position":"DF", "score": 5}
+
   ]
 }

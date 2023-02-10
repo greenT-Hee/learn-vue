@@ -14,6 +14,10 @@ section {
   margin-top: 80px;
 }
 
+.btnWrap {
+  margin-bottom: 10px;
+}
+
 table {
   text-align: center;
 }
@@ -21,6 +25,10 @@ table {
 thead {
   font-size: 18px;
   font-weight: 900;
+  border-bottom: 4px solid #ffffff;
+}
+
+thead > tr {
   border-bottom: 2px solid #ffffff;
 }
 

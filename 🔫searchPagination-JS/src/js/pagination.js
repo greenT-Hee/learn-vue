@@ -3,13 +3,12 @@ let MAX_DATA = 10;
 const MAX_PAGE = 5;
 const sanitizer = new Sanitizer()
 
-
 const getDataList = async () => {
   try{
     const response = await (await fetch('../../src/data.json')).json();
     noticeData = response.chelseaPlayer;
     console.log(noticeData);
-
+    
     if(noticeData.length != 0) {
       createListHTML(1);
       createPaginHTML(1);
@@ -23,6 +22,7 @@ getDataList();
 
 const createListHTML = (selectedPage) => {
   const tbody = document.querySelector('tbody');
+  tbody.innerHTML = '';
   let dataStart = (selectedPage - 1) * MAX_DATA;
   let listHTML = '';
 
@@ -55,8 +55,8 @@ const createPaginHTML = (currentPage) => {
   if(lastPage > totalPage) lastPage = totalPage;
   
   if(prev > 0) {
-    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="first">first</a></li>`;
-    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="prev">prev</a></li>`;
+    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="first">첫번째</a></li>`;
+    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="prev">이전</a></li>`;
   }
 
   for(let i = firstPage; i < lastPage + 1; i++) {
@@ -64,12 +64,8 @@ const createPaginHTML = (currentPage) => {
   }
 
   if(lastPage < totalPage) {
-    pagingHTML += `<li onClick="alert()" class="page-item"><a class="page-link" href="#" id="next">next</a></li>`;
-    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="last">last</a></li>`;
-  }
-
-  const alert = () => {
-    alert('hello world')
+    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="next">다음</a></li>`;
+    pagingHTML += `<li class="page-item"><a class="page-link" href="#" id="last">마지막</a></li>`;
   }
 
   // navUl.innerHTML = pagingHTML;
@@ -79,7 +75,9 @@ const createPaginHTML = (currentPage) => {
   for(let i = 0; i < pageLink.length; i++) {
     pageLink[i].addEventListener('click', (e)=> {
       e.preventDefault();
-      navUl.innerHTML = ``;
+      const tbody = document.querySelector('tbody');
+      tbody.innerHTML = ''
+      navUl.innerHTML = '';
 
       let pageId = e.target.id; 
       let selectedPage = pageId; 
@@ -115,3 +113,36 @@ const search = (selectedPage) => {
   })
 }
 
+const changeListCount = (pagingHTML, listHTML) => {
+  const dropdownItem = document.querySelectorAll('.dropdown-item');
+  for(let i = 0; i < dropdownItem.length; i++) {
+    dropdownItem[i].addEventListener('click', (e)=> {
+      e.preventDefault();
+  
+      dropdownItem[i].value = e.target.textContent;
+      const listDataCount = dropdownItem[i].value;
+      MAX_DATA = listDataCount;   
+  
+      const navUl = document.querySelector('#navUl');
+      const tbody = document.querySelector('tbody');
+      navUl.innerHTML= '';
+      tbody.innerHTML = '';
+
+      createListHTML(1);
+      createPaginHTML(1);
+    })
+}
+}
+
+
+const $addList = document.querySelector('#add');
+$addList.addEventListener('click', () => {
+  const tbody = document.querySelector('tbody');
+  const tr = document.createElement('tr');
+  for(let i = 0; i < 4; i++) {
+    const td = document.createElement('td');
+    td.setAttribute('id', 'list')
+    tr.append(td);
+  }
+  tbody.append(tr);
+})
