@@ -23,13 +23,13 @@ getDataList();
 const createListHTML = (selectedPage) => {
   const tbody = document.querySelector('tbody');
   tbody.innerHTML = '';
-  let dataStart = (selectedPage - 1) * MAX_DATA;
   let listHTML = '';
+  let dataStart = (selectedPage - 1) * MAX_DATA;
 
   for(let i = dataStart; i < dataStart + MAX_DATA; i++) {
     if (noticeData[i] == null) break;
     listHTML += `<tr id="list">`;
-    listHTML += `<td>${noticeData[i].name}</td>`;
+    listHTML += `<td onClick="숨겨질함수()">${noticeData[i].name}</td>`;
     listHTML += `<td>${noticeData[i].nation}</td>`;
     listHTML += `<td>${noticeData[i].position}</td>`;
     listHTML += `<td>${noticeData[i].score}</td>`;
@@ -38,6 +38,10 @@ const createListHTML = (selectedPage) => {
 
   // tbody.innerHTML = listHTML;
   tbody.setHTML(listHTML, sanitizer);
+
+}
+const 숨겨질함수 = () => {
+  alert("숨겨진 alert");
 }
 
 const createPaginHTML = (currentPage) => {
@@ -113,6 +117,7 @@ const search = (selectedPage) => {
   })
 }
 
+// 망함
 const changeListCount = (pagingHTML, listHTML) => {
   const dropdownItem = document.querySelectorAll('.dropdown-item');
   for(let i = 0; i < dropdownItem.length; i++) {
@@ -134,7 +139,7 @@ const changeListCount = (pagingHTML, listHTML) => {
 }
 }
 
-
+// 리스트 추가 
 const $addList = document.querySelector('#add');
 $addList.addEventListener('click', () => {
   const tbody = document.querySelector('tbody');
