@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.4/index.global.min.js'></script>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.4/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.4/index.global.min.js'></script> -->
+  <title>Document</title>
+  <style>
+    .modal {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 10;
+      display: none;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    label {
+      display: inline-block;
+      min-width: 80px;
+    }
+
+    .closeBtn {
+      display: block;
+      width: 150px;
+      margin: 40px auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <section style="width:1200px; margin: 0 auto;">
+    <h1>교육 콘텐츠 관리</h1>
+    <div id='calendar'></div>
+    <article class="modal">
+      <h2>교육콘텐츠</h2>
+      <form action="post">
+        <div class="wrapIput">
+          <label for="title">일정명</label>
+          <input type="text" id="title">
+        </div>
+        <div class="wrapIput">
+          <label for="start">시작일</label>
+          <input type="date" id="start">
+        </div>
+        <div class="wrapIput">
+          <label for="end">종료일</label>
+          <input type="date" id="end">
+        </div>
+        <div>
+          <label for="color">색상</label>
+          <select>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="lightCoral">lightCoral</option>
+            <option value="green">green</option>
+          </select>
+        </div>
+        <button type="button" class="closeBtn">닫기</button>
+      </form>
+    </article>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.querySelector('.modal');
+      const title = document.querySelector('#title');
+      const start = document.querySelector('#start');
+      const end = document.querySelector('#end');
+      const closeBtn = document.querySelector('.closeBtn');
+      // closeBtn.addEventListener('click', () => {
+      //   modal.style.display = "none"
+
+      // })
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: true,
+        dateClick: function (dateClickInfo) {
+          let modalDate = dateClickInfo.dateStr;
+          start.value = modalDate;
+          end.value = modalDate;
+        },
+
+        select: function (arg) {
+          modal.style.display = "block";
+          closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (title.value && start.value && end.value) {
+              console.log(title.value, start.value, end.value)
+              calendar.addEvent({
+                title: title.value,
+                start: start.value,
+                end: end.value,
+              })
+              modal.style.display = "none"
+            }
+            if (!title.value) {
+              alert("제목을 입력해주세요")
+            }
+          })
+        }
+      });
+
+      calendar.render();
+      calendar.setOption('locale', 'ko');
+    });
+  </script>
+</body>
+
+</html>
