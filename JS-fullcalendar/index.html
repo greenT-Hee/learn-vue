@@ -65,10 +65,10 @@
         <div>
           <label for="color">색상</label>
           <select>
-            <option value="red">red</option>
-            <option value="blue">blue</option>
-            <option value="lightCoral">lightCoral</option>
-            <option value="green">green</option>
+            <option value="#8ac5e6">하늘색</option>
+            <option value="#53c2a8">민트색</option>
+            <option value="#bdb4f0">보라색</option>
+            <option value="#ff8c8c">코랄색</option>
           </select>
         </div>
         <button type="button" class="closeBtn">닫기</button>
@@ -83,30 +83,34 @@
       const start = document.querySelector('#start');
       const end = document.querySelector('#end');
       const closeBtn = document.querySelector('.closeBtn');
-      // closeBtn.addEventListener('click', () => {
-      //   modal.style.display = "none"
-
-      // })
+      const select = document.querySelector('select');
+      let eventBg;
+      console.log(eventBg)
+      title.value = '';
+      start.value = '';
+      end.value = '';
       var calendarEl = document.getElementById('calendar');
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         selectable: true,
+        eventColor: eventBg,
         dateClick: function (dateClickInfo) {
           let modalDate = dateClickInfo.dateStr;
           start.value = modalDate;
           end.value = modalDate;
         },
-
         select: function (arg) {
           modal.style.display = "block";
           closeBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            eventBg = select.value;
             if (title.value && start.value && end.value) {
               console.log(title.value, start.value, end.value)
+
               calendar.addEvent({
                 title: title.value,
-                start: start.value,
-                end: end.value,
+                start: start.value + "T00:00:00",
+                end: end.value + "T00:00:00",
               })
               modal.style.display = "none"
             }
