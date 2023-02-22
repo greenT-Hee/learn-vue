@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>logout</h1>
+  <script>
+    var data = {
+      "b_no": "8988701014" // 사업자번호 "xxxxxxx" 로 조회 시,
+    };
+
+
+    async function loginData() {
+      try {
+        const res = await fetch('http://api.odcloud.kr/api/nts-businessman/v1/validate?serviceKey=b/Vqa9nDO15YlqIsK2Waioeixw8ru1ahHrk+b1HOJY7cOxYRiJaLgbKMboeatvx1MiqQL9WtYX4m4LbCtddjHg==', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            "businesses": [
+              data
+            ]
+          }),
+        });
+        const resJson = await res.json();
+        console.log(resJson)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    loginData();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+    integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx"
+    crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('7e2c6eefc7f722159c39a5f4cadbfeca'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
+
+  <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+    <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
+  </a>
+  <p id="token-result"></p>
+
+  <script>
+    function loginWithKakao() {
+      Kakao.Auth.authorize({
+        redirectUri: 'http://127.0.0.1:5500/login.html',
+      });
+    }
+
+    // 아래는 데모를 위한 UI 코드입니다.
+    displayToken()
+    function displayToken() {
+      var token = getCookie('authorize-access-token');
+
+      if (token) {
+        Kakao.Auth.setAccessToken(token);
+        Kakao.Auth.getStatusInfo()
+          .then(function (res) {
+            if (res.status === 'connected') {
+              document.getElementById('token-result').innerText
+                = 'login success, token: ' + Kakao.Auth.getAccessToken();
+            }
+            // getToken(Kakao.Auth.getAccessToken())
+          })
+          .catch(function (err) {
+            Kakao.Auth.setAccessToken(null);
+          });
+      }
+    }
+
+    async function getToken(token) {
+      let code = location.search.split('=')[1];
+      const response = await fetch('https://kauth.kakao.com/oauth/token', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        body: {
+          grant_type: "authorization_code",
+          client_id: "8bd64ffc041259588bc1374f6f5d9c2a",
+          redirect_uri: "http://127.0.0.1:5500/login.html",
+          code: code
+        }
+      })
+    }
+
+    function getCookie(name) {
+      var parts = document.cookie.split(name + '=');
+      if (parts.length === 2) { return parts[1].split(';')[0]; }
+    }
+  </script> -->
+
+  <a href="javascript:kakaoLogin();">
+    <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" alt="카카오계정 로그인" />
+  </a>
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    window.Kakao.init('7e2c6eefc7f722159c39a5f4cadbfeca');
+
+    //로그인
+    function kakaoLogin() {
+      window.Kakao.Auth.login({
+        scope: 'profile_nickname', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+        success: function (response) {
+          console.log(response) // 로그인 성공하면 받아오는 데이터
+          window.Kakao.API.request({ // 사용자 정보 가져오기 
+            url: '/v2/user/me',
+            success: (res) => {
+              const kakao_account = res.kakao_account;
+              console.log(kakao_account)
+              // window.location.href = './home.html' //리다이렉트 되는 코드
+            }
+          });
+        },
+        fail: function (error) {
+          console.log(error);
+        }
+      });
+    }
+
+    // 로그아웃
+    function kakaoLogout() {
+      if (!Kakao.Auth.getAccessToken()) {
+        console.log('Not logged in.');
+        return;
+      }
+      Kakao.Auth.logout(function (response) {
+        alert(response + ' logout');
+        window.location.href = './login.html'
+      });
+    };
+  </script>
+</body>
+
+</html>
