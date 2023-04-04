@@ -7,7 +7,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -16,7 +17,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -25,7 +27,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -34,7 +37,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -43,7 +47,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -52,7 +57,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -61,7 +67,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -70,7 +77,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -79,16 +87,28 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑10",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
 
     {
@@ -98,7 +118,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -107,7 +128,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -116,7 +138,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -125,7 +148,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -134,7 +158,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -143,7 +168,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -152,7 +178,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -161,7 +188,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -170,16 +198,28 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑20",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
 
     {
@@ -189,7 +229,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -198,7 +239,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -207,7 +249,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -216,7 +259,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -225,7 +269,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -234,7 +279,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -243,7 +289,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -252,7 +299,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -261,16 +309,28 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑30",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
 
     {
@@ -280,7 +340,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -289,7 +350,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -298,7 +360,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -307,7 +370,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -316,7 +380,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -325,7 +390,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -334,7 +400,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -343,7 +410,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -352,16 +420,28 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑40",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
 
     {
@@ -371,7 +451,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -380,7 +461,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -389,7 +471,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -398,7 +481,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -407,7 +491,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -416,7 +501,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -425,7 +511,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -434,7 +521,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -443,16 +531,28 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑50",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
 
     {
@@ -462,7 +562,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -471,7 +572,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -480,7 +582,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -489,7 +592,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -498,7 +602,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -507,7 +612,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -516,7 +622,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "취소완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -525,7 +632,8 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "교환완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
@@ -534,16 +642,139 @@
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     },
     {
       "orederNumber": "20230101_000001",
-      "productName": "뉴스클리핑60",
+      "productName": "뉴스클리핑",
       "productCount": 5,
       "totalPrice": 30000,
       "paymentInfo": "/images/workmarket/img-test01.png",
       "date" : "2023-04-04",
-      "status" : "주문완료"
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
+    },
+    {
+      "orederNumber": "20230101_000001",
+      "productName": "뉴스클리핑",
+      "productCount": 5,
+      "totalPrice": 30000,
+      "paymentInfo": "/images/workmarket/img-test01.png",
+      "date" : "2023-04-04",
+      "status" : "취소완료",
+      "thumbnail" : "/images/workmarket/img-test01.png"
     }
   ]
 }
