@@ -1,6 +1,6 @@
 {
   "product" : [
-    {"servicePrice": 0,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 10, "keywordFree": 1, "title": "뉴스클리핑1", "keyword" : "#test #hello #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"},
+    {"servicePrice": 0,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 10, "keywordFree": 1, "title": "뉴스클리핑1", "keyword" : "#test #hello #melody", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"},
     {"servicePrice": 0,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 9, "keywordFree": 2, "title": "뉴스클리핑1", "keyword" : "#test #hello #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"},
     {"servicePrice": 0,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 8, "keywordFree": 3, "title": "뉴스클리핑1", "keyword" : "#test #hello #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"},
     {"servicePrice": 0,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 7, "keywordFree": 4, "title": "뉴스클리핑1", "keyword" : "#test #hello #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"},
