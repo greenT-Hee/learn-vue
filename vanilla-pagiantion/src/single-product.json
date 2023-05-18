@@ -1,5 +1,5 @@
 {
   "product" : [
-  {"servicePrice": 3000,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 10, "keywordFree": 1, "title": "뉴스클리핑1", "keyword" : "#test #뉴스 #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": ""}
+  {"servicePrice": 3000,"keywordPrice" : 500, "emailPrice" : 1000, "emailFree" : 10, "keywordFree": 1, "title": "뉴스클리핑1", "keyword" : "#test #뉴스 #eden", "image" : "/images/workmarket/img-test01.png", "eventYn": "Y"}
     ]
  }
